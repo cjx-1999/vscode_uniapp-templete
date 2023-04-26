@@ -10,4 +10,10 @@ onHide(() => {
 })
 </script>
 
-<style></style>
+<style lang="scss">
+@import "@/uni_modules/uview-plus/index.scss";
+@import '@/uni_modules/uview-plus/theme.scss';
+@import "@/colorui/main.css";
+@import "@/colorui/icon.css";
+@import "./static/css/app.scss"; /* 你的项目css */
+</style>
