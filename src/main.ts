@@ -1,6 +1,8 @@
 import { createSSRApp } from 'vue'
+import { userStore } from './store/user'
 import App from './App.vue'
 import 'uno.css'
+import store from './store'
 import uviewPlus from '@/uni_modules/uview-plus'
 
 uni.$u.setConfig({
@@ -20,6 +22,9 @@ uni.$u.setConfig({
 export function createApp() {
   const app = createSSRApp(App)
   app.use(uviewPlus)
+  app.use(store)
+  console.log(userStore().user, '这是我的名字')
+
   return {
     app,
   }
